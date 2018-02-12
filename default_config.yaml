@@ -1,0 +1,21 @@
+# pre-register OSC clients
+pre-register:
+  - ip: 'localhost'
+    port: 57120
+
+# allow users with names not matching any mapping to login (becomes 'anonymous')
+allow-unlisted: true
+
+# map users to setup files
+user-mappings:
+  default:
+    usertypes:
+    # usertype: path-to-setup.js
+      default: 'default_setup.js'
+      admin: 'default_setup.js'
+    users:
+    # username: usertype
+      anonymuos: default
+      foo: admin
+      
+mapping: default
